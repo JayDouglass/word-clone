@@ -230,3 +230,44 @@ h1 {
     transform: translateY(0%);
   }
 }
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.keyboard .row {
+  display: flex;
+  justify-content: center;
+  gap: 0.2em;
+}
+
+.keyboard .row > span {
+  background: var(--color-gray-700);
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  height: 1.5em;
+  width: 1.5em;
+  font-weight: bold;
+}
+
+.keyboard .row > span.misplaced {
+  background: var(--color-warning);
+  border-color: var(--color-warning);
+  color: white;
+}
+
+.keyboard .row > span.incorrect {
+  background: var(--color-gray-300);
+  border-color: var(--color-gray-300);
+  color: white;
+}
+
+.keyboard .row > span.correct {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: white;
+}
